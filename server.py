@@ -50,6 +50,6 @@ async def handle_sse(request):
 app = Starlette(
     routes=[
         Route("/sse", endpoint=handle_sse),
-        Mount("/messages", endpoint=sse_transport.handle_post_messages),
+        Mount("/messages", endpoint=sse_transport.handle_post_message),
     ]
 )
